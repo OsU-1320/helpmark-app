@@ -1,0 +1,9 @@
+{
+  "type": "FeatureCollection",
+  "name": "ダミー（架空）の屋内地図POI。実データではありません",
+  "features": [
+    { "type": "Feature", "properties": { "kind": "エレベーター", "floor": "1F", "label": "架空のサンプル：北口" }, "geometry": { "type": "Point", "coordinates": [135.0004, 35.0008] } },
+    { "type": "Feature", "properties": { "kind": "多機能トイレ", "floor": "1F", "label": "架空のサンプル" }, "geometry": { "type": "Polygon", "coordinates": [[[135.0, 35.0004], [135.0002, 35.0004], [135.0002, 35.0006], [135.0, 35.0006], [135.0, 35.0004]]] } },
+    { "type": "Feature", "properties": { "kind": "自動販売機", "floor": "1F", "label": "取り込み対象外の種類" }, "geometry": { "type": "Point", "coordinates": [135.0001, 35.0001] } }
+  ]
+}

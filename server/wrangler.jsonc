@@ -1,0 +1,19 @@
+{
+  "$schema": "../node_modules/wrangler/config-schema.json",
+  "name": "helpmark-server",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-20",
+  "observability": {
+    "enabled": true
+  },
+  "ratelimits": [
+    // 接続元ごとの上限。会場のWi-Fiのように、多くの端末が同じ接続元になる場合を考えて、余裕を持たせてある
+    { "name": "API_LIMITER", "namespace_id": "1001", "simple": { "limit": 600, "period": 60 } },
+    { "name": "NEW_DEVICE_LIMITER", "namespace_id": "1002", "simple": { "limit": 60, "period": 60 } }
+  ],
+  "vars": {
+    "FCM_PROJECT_ID": "your-firebase-project-id",
+    "APP_ORIGIN": "https://your-app.example.com",
+    "ALLOWED_ORIGINS": "https://your-app.example.com"
+  }
+}

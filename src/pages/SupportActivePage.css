@@ -1,0 +1,395 @@
+.support-active {
+  min-height: 100svh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+  padding: 24px 20px max(24px, env(safe-area-inset-bottom));
+}
+
+.support-active--cancelled {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+}
+
+.support-active__cancelled-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.support-active__cancelled-note {
+  font-size: 14px;
+  color: var(--muted);
+  max-width: 320px;
+}
+
+.support-active__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.support-active__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.support-active__card-btn {
+  min-height: 40px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.support-active__section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.support-active__section--urgent {
+  border-color: var(--red);
+  background: rgba(229, 0, 26, 0.04);
+}
+
+.support-active__heading {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--teal);
+}
+
+.support-active__checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.support-active__check-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text);
+  min-height: 32px;
+}
+
+.support-active__check-item input {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.support-active__check-item.is-checked span {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.support-active__call119-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 56px;
+  border-radius: 12px;
+  background: var(--red);
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.support-active__hint {
+  font-size: 13px;
+  color: var(--text);
+  text-align: center;
+}
+
+.support-active__aed {
+  background: #eef7f5;
+  border: 1px solid rgba(47, 122, 109, 0.35);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.support-active__aed-label {
+  font-size: 13px;
+  color: var(--teal);
+  font-weight: 700;
+}
+
+.support-active__aed-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.support-active__aed-meta {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.support-active__aed-src {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.support-active__map-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  border-radius: 10px;
+  border: 2px solid var(--teal);
+  background: white;
+  color: var(--teal);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 0 14px;
+}
+
+.support-active__station-map {
+  text-align: center;
+  padding: 18px 0;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+}
+
+.support-active__station-map-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.support-active__station-map-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.support-active__emergency-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  border-radius: 10px;
+  border: 2px solid var(--orange);
+  background: white;
+  color: var(--orange);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.support-active__extra-btn {
+  min-height: 48px;
+  border-radius: 10px;
+  border: 2px solid var(--text);
+  background: white;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.support-active__extra-sent {
+  font-size: 13px;
+  color: var(--teal);
+  font-weight: 700;
+  text-align: center;
+}
+
+.support-active__complete-btn {
+  min-height: 60px;
+  border-radius: 999px;
+  border: none;
+  background: var(--teal);
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.support-active__complete-btn:disabled {
+  background: var(--border);
+  color: var(--muted);
+}
+
+.support-active__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100;
+}
+
+.support-active__choice-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border-radius: 20px 20px 0 0;
+  padding: 24px 20px max(20px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.support-active__choice-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--text);
+  font-size: 16px;
+}
+
+.support-active__choice-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text);
+  padding-right: 40px;
+}
+
+.support-active__choice-item {
+  min-height: 52px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: white;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
+  padding: 0 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+}
+
+.support-active__choice-item:disabled {
+  color: var(--muted);
+  background: var(--bg);
+}
+
+.support-active__choice-throttled {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* 緊急連絡先：NFCタグのキーで解錠する前の案内 */
+.support-active__unlock {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.support-active__unlock-text {
+  font-size: 15px;
+  color: var(--text);
+}
+
+.support-active__unlock-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.support-active__unlock-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.support-active__unlock-input {
+  min-height: 48px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font: inherit;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text);
+  background: var(--surface);
+}
+
+.support-active__unlock-btn {
+  min-height: 48px;
+  border: none;
+  border-radius: 10px;
+  background: var(--orange);
+  color: white;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.support-active__unlock-btn:disabled {
+  opacity: 0.5;
+}
+
+.support-active__unlock-error {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.support-active__unlock-done {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #2f7a6d;
+}
+
+.support-active__aed-map {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  margin-top: 8px;
+  padding: 0 16px;
+  border: 2px solid var(--red);
+  border-radius: 12px;
+  color: var(--red);
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.support-active__aed-external {
+  margin: 4px 0 0;
+  font-size: 13px;
+  color: var(--muted);
+}

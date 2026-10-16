@@ -1,0 +1,132 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  background: var(--bg);
+}
+
+.home-page__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-page__logo-mark {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  flex: none;
+}
+
+.home-page__logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* 「支援を要請中」バナー：自分の要請がactiveの間、常時表示しタップで支援待ち画面に戻れる */
+.home-page__requesting-banner {
+  display: block;
+  width: 100%;
+  border: none;
+  background: var(--teal);
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 10px 16px;
+  text-align: center;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.home-page__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  /* stickyなBottomNavに被らず最下段のボタンがタップできるよう下端を確保 */
+  padding: 32px 24px calc(104px + env(safe-area-inset-bottom));
+}
+
+.home-page__label {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+.home-page__buzzer {
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  background: var(--red);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 0 12px rgba(229, 0, 26, 0.12),
+    0 8px 40px rgba(229, 0, 26, 0.45);
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.home-page__buzzer:active {
+  transform: scale(0.94);
+  box-shadow:
+    0 0 0 6px rgba(229, 0, 26, 0.1),
+    0 4px 20px rgba(229, 0, 26, 0.35);
+}
+
+.home-page__buzzer.is-active {
+  animation: buzzer-pulse 0.6s ease-in-out infinite;
+}
+
+@keyframes buzzer-pulse {
+  0%, 100% { transform: scale(1);    box-shadow: 0 0 0 12px rgba(229,0,26,0.12), 0 8px 40px rgba(229,0,26,0.45); }
+  50%      { transform: scale(1.08); box-shadow: 0 0 0 28px rgba(229,0,26,0.06), 0 8px 56px rgba(229,0,26,0.60); }
+}
+
+.home-page__stop-label {
+  color: white;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.home-page__note {
+  font-size: 15px;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* 要支援者向け支援要請ボタン */
+.home-page__sos-btn {
+  width: min(360px, calc(100vw - 48px));
+  font: inherit;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+  box-shadow: 0 4px 16px rgba(229, 0, 26, 0.25);
+}
+
+.home-page__sos-btn:active {
+  transform: scale(0.97);
+}
+
+.home-page__no-alerts {
+  font-size: 14px;
+  color: var(--muted);
+  text-align: center;
+}

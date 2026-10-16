@@ -1,0 +1,467 @@
+.support-wait {
+  min-height: 100svh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.support-wait__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.support-wait__title {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+}
+
+.support-wait__back {
+  border: none;
+  background: transparent;
+  color: var(--teal);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.support-wait__main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 20px calc(48px + env(safe-area-inset-bottom));
+}
+
+.support-wait__empty {
+  font-size: 15px;
+  color: var(--muted);
+  margin-top: 40px;
+}
+
+/* ── 進み具合（3ステップ） ─────────────────────────── */
+.support-wait__steps {
+  list-style: none;
+  display: flex;
+  width: min(400px, 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.support-wait__step {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 前のステップとの間をつなぐ線 */
+.support-wait__step + .support-wait__step::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  right: 50%;
+  width: 100%;
+  height: 3px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.support-wait__step.is-done::before,
+.support-wait__step.is-current::before {
+  background: var(--teal);
+}
+
+.support-wait__step-dot {
+  position: relative;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  background: var(--surface);
+  border: 3px solid var(--border);
+  color: var(--muted);
+}
+
+.support-wait__step.is-done .support-wait__step-dot {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+
+.support-wait__step.is-current .support-wait__step-dot {
+  border-color: var(--teal);
+  color: var(--teal);
+  box-shadow: 0 0 0 5px rgba(47, 122, 109, 0.15);
+}
+
+.support-wait__step-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.support-wait__step.is-done .support-wait__step-label,
+.support-wait__step.is-current .support-wait__step-label {
+  color: var(--teal);
+}
+
+/* ── いまの状況 ───────────────────────────────────── */
+.support-wait__hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  border: 2px solid var(--teal);
+  border-radius: 20px;
+  padding: 20px 20px 22px;
+  width: min(400px, 100%);
+  text-align: center;
+}
+
+.support-wait__illust {
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.support-wait__hero-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+}
+
+.support-wait__hero-sub {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.support-wait__direction {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 4px 0;
+}
+
+.support-wait__arrow {
+  display: inline-block;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--teal);
+  transition: transform 0.5s ease;
+}
+
+.support-wait__distance {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--teal);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+  margin: 0;
+  text-align: left;
+}
+
+.support-wait__compass-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--teal);
+  margin: 0;
+  text-align: left;
+}
+
+.support-wait__waiting {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.support-wait__timeline {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin: 8px 0 0;
+  padding: 10px 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.support-wait__timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--teal);
+  text-align: left;
+}
+
+.support-wait__timeline-item.is-completed,
+.support-wait__timeline-item.is-left {
+  color: var(--muted);
+}
+
+.support-wait__extra-notice {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--orange);
+  margin: 0;
+}
+
+.support-wait__complete-btn {
+  min-height: 44px;
+  margin-top: 6px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: white;
+  color: var(--teal);
+  border: 2px solid var(--teal);
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ── このあとの流れ（分岐カード） ─────────────────────── */
+.support-wait__next-label {
+  align-self: center;
+  width: min(400px, 100%);
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--muted);
+  margin: 4px 0 -6px;
+}
+
+.support-wait__branch {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(400px, 100%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px 16px;
+}
+
+.support-wait__branch-title {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--teal);
+  margin: 0;
+}
+
+.support-wait__branch--fallback .support-wait__branch-title {
+  color: var(--muted);
+}
+
+/* 3分経過後：同じカードをオレンジで強調（構成は変えない） */
+.support-wait__branch--fallback.is-now {
+  border: 2px solid var(--orange);
+  background: #fff8f0;
+}
+
+.support-wait__branch--fallback.is-now .support-wait__branch-title {
+  color: var(--orange);
+}
+
+.support-wait__branch-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.support-wait__branch-illust {
+  flex-shrink: 0;
+  color: var(--text);
+}
+
+.support-wait__branch-text {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+  text-align: left;
+}
+
+.support-wait__call-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 48px;
+  border-radius: 12px;
+  border: 2px solid var(--orange);
+  color: var(--orange);
+  background: white;
+  font-size: 15px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.support-wait__branch--fallback.is-now .support-wait__call-btn {
+  background: var(--orange);
+  color: white;
+}
+
+/* 電波はゆっくり明滅させる（「静かに、確実に進んでいる」表現）。動きを減らす設定では止める */
+.support-illust__waves path {
+  animation: support-wave 2.4s ease-in-out infinite;
+}
+
+.support-illust__waves path:nth-child(2),
+.support-illust__waves path:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.support-illust__waves path:nth-child(3),
+.support-illust__waves path:nth-child(6) {
+  animation-delay: 0.8s;
+}
+
+@keyframes support-wave {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .support-illust__waves path {
+    animation: none;
+  }
+}
+
+.support-wait__cancel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.support-wait__cancel-note {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.support-wait__cancel-btn {
+  min-height: 44px;
+  padding: 8px 20px;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.support-wait__overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 20;
+}
+
+.support-wait__confirm-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 24px;
+  width: min(320px, 100%);
+}
+
+.support-wait__confirm-title {
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text);
+  text-align: center;
+  margin: 0 0 4px;
+}
+
+.support-wait__confirm-continue {
+  min-height: 52px;
+  border: none;
+  border-radius: 12px;
+  background: var(--teal);
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.support-wait__confirm-cancel {
+  min-height: 36px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.support-wait__key {
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(47, 122, 109, 0.08);
+  text-align: center;
+}
+
+.support-wait__key-label {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--teal);
+}
+
+.support-wait__key-value {
+  margin: 2px 0;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.support-wait__key-note {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.support-wait__key-renew {
+  margin-top: 8px;
+  padding: 8px 4px;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer;
+}

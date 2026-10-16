@@ -1,0 +1,16 @@
+{
+  "_comment": "動作確認用の設定（架空のサンプルだけを読む）。実データ用の書き方は scripts/import-stations.mjs の冒頭を見て、station-sources.json として作る",
+  "sources": [
+    {
+      "type": "geojson",
+      "file": "sample/dummy-indoor.geojson",
+      "station": "ダミー駅（架空）",
+      "kindField": "kind",
+      "kindMap": { "エレベーター": "elevator", "多機能トイレ": "toilet" },
+      "floorField": "floor",
+      "noteField": "label",
+      "demo": true
+    },
+    { "type": "csv", "file": "sample/dummy-stations.csv", "demo": true }
+  ]
+}

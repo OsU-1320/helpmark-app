@@ -1,0 +1,81 @@
+.radar {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 8px auto 4px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+}
+
+.radar__ring {
+  fill: none;
+  stroke: rgba(0, 0, 0, 0.16);
+  stroke-width: 1.5;
+  stroke-dasharray: 5 5;
+}
+
+.radar__ring--outer {
+  stroke: rgba(0, 0, 0, 0.4);
+  stroke-width: 2;
+}
+
+.radar__axis {
+  stroke: rgba(0, 0, 0, 0.1);
+  stroke-width: 1;
+}
+
+.radar__ring-label {
+  font-size: 13px;
+  fill: #666;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 3px;
+}
+
+.radar__north {
+  font-size: 15px;
+  font-weight: 800;
+  fill: #1a1a1a;
+}
+
+.radar__me {
+  fill: #fff;
+  stroke: #1a1a1a;
+  stroke-width: 5;
+}
+
+.radar__me-label {
+  font-size: 13px;
+  font-weight: 800;
+  fill: #1a1a1a;
+  paint-order: stroke;
+  stroke: #fff;
+  stroke-width: 3px;
+}
+
+.radar__dot {
+  cursor: pointer;
+}
+
+.radar__hit {
+  fill: transparent;
+}
+
+.radar__marker {
+  stroke: #fff;
+  stroke-width: 3;
+}
+
+.radar__no {
+  font-size: 14px;
+  font-weight: 800;
+  fill: #fff;
+  pointer-events: none;
+}
+
+.radar__halo {
+  fill: none;
+  stroke: #1a1a1a;
+  stroke-width: 3;
+}

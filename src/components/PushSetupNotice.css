@@ -1,0 +1,44 @@
+.push-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(360px, 100%);
+  padding: 14px 16px;
+  border: 2px solid var(--orange);
+  border-radius: 14px;
+  background: #fff8f0;
+  text-align: left;
+}
+
+.push-setup__title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #8a4b12;
+}
+
+.push-setup__text {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.push-setup__btn {
+  min-height: 48px;
+  border: none;
+  border-radius: 12px;
+  background: var(--orange);
+  color: white;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.push-setup__btn:disabled {
+  opacity: 0.6;
+}
+
+.push-setup__error {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--red);
+}

@@ -1,0 +1,411 @@
+.pw {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 20px 16px 150px;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+.pw__header {
+  margin-bottom: 20px;
+}
+
+.pw__back {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 8px;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.pw__step-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 4px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.pw__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-h);
+  margin: 0 0 6px;
+  line-height: 1.3;
+}
+
+.pw__lead {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── カテゴリ選択（1行1カテゴリ） ─── */
+.pw__category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+
+.pw__cat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 12px 14px;
+  min-height: 76px;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  color: var(--text-h);
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+  touch-action: manipulation;
+  transition: border-color 0.15s, background 0.15s, transform 0.1s;
+}
+
+.pw__cat-card:active {
+  transform: scale(0.98);
+}
+
+.pw__cat-card.is-selected {
+  border-color: var(--c, var(--accent));
+  background: var(--surface);
+  box-shadow: inset 0 0 0 1px var(--c, var(--accent));
+}
+
+.pw__cat-icon {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--c-bg, rgba(47, 122, 109, 0.12));
+  color: var(--c, var(--teal));
+  display: grid;
+  place-items: center;
+}
+
+.pw__cat-text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pw__cat-label {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+.pw__cat-sublabel {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+.pw__cat-check {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  background: var(--surface);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+}
+
+.pw__cat-card.is-selected .pw__cat-check {
+  border-color: var(--c, var(--accent));
+  background: var(--c, var(--accent));
+}
+
+/* ── してほしいこと（前後の画面と同じ幅・同じ角丸にそろえる） ─── */
+.pw__suboption-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  flex: 1;
+}
+
+.pw__suboption-heading .pw__suboption-icon {
+  display: inline-flex;
+  color: var(--c, var(--text-h));
+}
+
+.pw__suboption-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-h);
+  margin: 0 0 10px;
+}
+
+.pw__suboption-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.pw__suboption-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 10px 14px;
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.pw__suboption-item.is-checked {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+
+.pw__suboption-checkbox {
+  margin: 0;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  accent-color: var(--accent);
+}
+
+.pw__suboption-label {
+  font-size: 15px;
+  color: var(--text-h);
+  line-height: 1.4;
+}
+
+/* ── 補足情報ステップ ─── */
+.pw__supplement {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.pw__field-group {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.pw__field-legend {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+  padding: 0 0 8px;
+  display: block;
+}
+
+.pw__field-hint {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.pw__field-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.pw__text-input,
+.pw__textarea {
+  font: inherit;
+  font-size: 16px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-h);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.pw__textarea {
+  resize: vertical;
+}
+
+.pw__error {
+  font-size: 14px;
+  color: var(--red);
+  margin: 0;
+}
+
+/* ── フッター（固定ボタン） ─── */
+.pw__footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+}
+
+.pw__next-btn {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  display: block;
+  font: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.pw__next-btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.pw__footer .pw__next-btn,
+.pw__footer .pw__edit-btn {
+  min-height: 52px;
+}
+
+.pw__edit-btn {
+  width: 100%;
+  max-width: 480px;
+  margin: 4px auto 0;
+  display: block;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.pw__confirm-card {
+  padding-bottom: 20px;
+}
+
+.pw__field-aside {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--muted);
+  opacity: 0.8;
+}
+
+.pw__field-hint--after {
+  margin: 6px 0 0;
+}
+
+/* ── 完了画面 ─── */
+.pw-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+  padding: 40px 24px;
+  gap: 16px;
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.pw-done__icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: white;
+  font-size: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.pw-done__title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0;
+}
+
+.pw-done__name {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0;
+}
+
+.pw-done__tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 340px;
+}
+
+.pw-done__tag {
+  font-size: 13px;
+  background: #eef7f5;
+  color: var(--teal);
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-weight: 600;
+}
+
+.pw-done__btn {
+  width: min(320px, calc(100vw - 48px));
+  font: inherit;
+  font-size: 17px;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.pw-done__edit {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 14px;
+  cursor: pointer;
+  font-family: inherit;
+  text-decoration: underline;
+  padding: 4px;
+}
+
+.pw-done__btn--sub {
+  background: var(--surface);
+  color: var(--text);
+  border: 2px solid var(--border);
+}

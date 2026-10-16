@@ -1,0 +1,131 @@
+:root {
+  --red: #E5001A;
+  --bg: #FAFAF8;
+  --text: #1A1A1A;
+  --teal: #2F7A6D;
+  --orange: #D9772F;
+  --muted: #666;
+  --surface: #ffffff;
+  --border: rgba(0, 0, 0, 0.08);
+
+  /* 区分ごとの色。赤＝緊急（急に倒れる）、ティール＝パートナー側、オレンジ＝確認・カウントダウンと意味が重ならない色を選ぶ。
+     色だけに頼らず、必ずピクトグラムと文字を併記する */
+  --cat-anxiety: #7B5EA7;
+  --cat-sensory: #2F6FA8;
+  --cat-communication: #4E8A2E;
+  --cat-mobility: #8C5A2B;
+  --cat-medical: #E5001A;
+  --cat-other: #6B6B6B;
+
+  --sans: system-ui, 'Segoe UI', 'Hiragino Sans', 'Noto Sans JP', Roboto, sans-serif;
+
+  --text-h: var(--text);
+  --accent: var(--red);
+  --accent-bg: rgba(229, 0, 26, 0.08);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* 区分の色（--c：ピクトグラム・縁取り、--c-bg：ピクトグラムの下地） */
+.cat--anxiety { --c: var(--cat-anxiety); --c-bg: rgba(123, 94, 167, 0.13); }
+.cat--sensory { --c: var(--cat-sensory); --c-bg: rgba(47, 111, 168, 0.13); }
+.cat--communication { --c: var(--cat-communication); --c-bg: rgba(78, 138, 46, 0.14); }
+.cat--mobility { --c: var(--cat-mobility); --c-bg: rgba(140, 90, 43, 0.14); }
+.cat--medical { --c: var(--cat-medical); --c-bg: rgba(229, 0, 26, 0.11); }
+.cat--other { --c: var(--cat-other); --c-bg: rgba(107, 107, 107, 0.14); }
+
+.legacy-tag-notice {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: #fff4e5;
+  border-bottom: 1px solid var(--orange);
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.legacy-tag-notice p {
+  margin: 0;
+  flex: 1;
+}
+
+.legacy-tag-notice button {
+  flex: none;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid var(--orange);
+  border-radius: 10px;
+  background: #fff;
+  font: inherit;
+  color: var(--text);
+}
+
+/* デモ用の位置を使っているあいだの表示（本物の位置と取り違えないよう、常に出す） */
+.demo-loc-notice {
+  position: sticky;
+  top: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.demo-loc-notice p {
+  margin: 0;
+  flex: 1;
+}
+
+.demo-loc-notice button {
+  flex: none;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+}

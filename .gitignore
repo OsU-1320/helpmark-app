@@ -1,0 +1,15 @@
+node_modules
+dist
+dist-ssr
+.wrangler
+.env
+.env.*
+!.env.example
+.dev.vars
+*.local
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+data-src
+scripts/station-sources.json

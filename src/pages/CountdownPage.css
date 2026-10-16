@@ -1,0 +1,144 @@
+.countdown {
+  min-height: 100svh;
+  background: var(--orange, #D9772F);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.countdown--sent {
+  background: var(--teal, #2F7A6D);
+}
+
+.countdown--failed {
+  background: #8a4a20;
+}
+
+.countdown__label {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.countdown__ring {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 10px solid rgba(255, 255, 255, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: countdown-shrink 1s ease-in-out infinite;
+}
+
+@keyframes countdown-shrink {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(0.96); }
+}
+
+.countdown__num {
+  font-size: 88px;
+  font-weight: 800;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.countdown__note {
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+.countdown__location {
+  font-size: 13px;
+  opacity: 0.75;
+}
+
+.countdown__sent-icon {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 72px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown__detail {
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.countdown__home-btn {
+  min-width: 240px;
+  min-height: 60px;
+  border-radius: 999px;
+  border: none;
+  background: white;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.countdown__home-btn--sub {
+  background: rgba(255, 255, 255, 0.25);
+  color: white;
+}
+
+.countdown__rest {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+  padding: 14px 20px;
+  max-width: 340px;
+}
+
+.countdown__rest-label {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.countdown__rest-name {
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.countdown__rest-meta {
+  font-size: 13px;
+  opacity: 0.85;
+}
+
+.countdown__rest-src {
+  font-size: 13px;
+  opacity: 0.6;
+}
+
+/* タグの持ち主の要請がすでに進行中のとき：駆けつけたパートナー向けにキーを見せる */
+.countdown__already-key {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: min(360px, 100%);
+  padding: 16px;
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.countdown__already-text {
+  font-size: 14px;
+  text-align: center;
+}
+
+.countdown__already-code {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}

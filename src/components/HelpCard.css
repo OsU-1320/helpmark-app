@@ -1,0 +1,209 @@
+.help-card-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 100;
+}
+
+.help-card-modal {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  max-height: 88svh;
+  overflow-y: auto;
+  background: var(--surface);
+  border-radius: 20px 20px 0 0;
+  padding: 24px 20px max(20px, env(safe-area-inset-bottom));
+}
+
+.help-card-modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--text);
+  font-size: 16px;
+}
+
+.help-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.help-card__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 44px;
+}
+
+.help-card__mark {
+  flex: none;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+}
+
+.help-card__title {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: var(--text);
+}
+
+.help-card__lead {
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.help-card__empty {
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.help-card__cat {
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--c, var(--teal));
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 12px 12px 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+
+.help-card__cat--medical {
+  background: rgba(229, 0, 26, 0.04);
+}
+
+.help-card__cat-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text);
+}
+
+.help-card__cat-icon {
+  flex: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--c-bg, rgba(47, 122, 109, 0.12));
+  color: var(--c, var(--teal));
+  display: grid;
+  place-items: center;
+}
+
+.help-card__cat-label {
+  display: block;
+  line-height: 1.3;
+}
+
+.help-card__cat-sub {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.help-card__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.help-card__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.035);
+}
+
+.help-card__item-icon {
+  flex: none;
+  color: var(--c, var(--teal));
+  display: grid;
+  place-items: center;
+}
+
+.help-card__item-text {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--text);
+}
+
+.help-card__cat-note,
+.help-card__note {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.035);
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.help-card__emergency {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.04);
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.help-card__emergency.is-on {
+  background: rgba(47, 122, 109, 0.1);
+  color: var(--teal);
+}
+
+.help-card__emergency-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.help-card__emergency-sub {
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.help-card__contact {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 4px 12px;
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: var(--text);
+}
+
+.help-card__contact dt {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.help-card__contact dd {
+  margin: 0;
+  font-weight: 700;
+}

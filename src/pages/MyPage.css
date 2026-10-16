@@ -1,0 +1,346 @@
+.my-page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
+.my-page {
+  max-width: 480px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px; /* BottomNav分 */
+  width: 100%;
+}
+
+.my-page__header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 20px 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.my-page__logo-mark {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex: none;
+}
+
+.my-page__logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+/* ── 未登録 ─── */
+.my-page__unregistered {
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.my-page__title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-h);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.my-page__lead {
+  font-size: 14px;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.my-page__entry-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 2px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  touch-action: manipulation;
+  transition: border-color 0.15s, transform 0.1s;
+}
+
+.my-page__entry-btn:active {
+  transform: scale(0.98);
+}
+
+.my-page__entry-btn--user {
+  border-color: var(--accent);
+  background: #fff5f5;
+}
+
+.my-page__entry-btn--supporter {
+  border-color: var(--teal);
+  background: #eef7f5;
+}
+
+.my-page__entry-icon {
+  font-size: 32px;
+  flex-shrink: 0;
+  display: inline-flex;
+}
+
+.my-page__entry-btn--user .my-page__entry-icon { color: var(--accent); }
+.my-page__entry-btn--supporter .my-page__entry-icon { color: var(--teal); }
+
+.my-page__entry-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.my-page__entry-btn--user .my-page__entry-title { color: var(--accent); }
+.my-page__entry-btn--supporter .my-page__entry-title { color: var(--teal); }
+
+.my-page__entry-sub {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* ── 登録済み共通 ─── */
+.my-page__registered {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.my-page__reg-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-h);
+  margin: 0;
+}
+
+.my-page__reg-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.my-page__reg-key {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.my-page__reg-val {
+  font-size: 15px;
+  color: var(--text-h);
+  line-height: 1.5;
+}
+
+.my-page__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.my-page__tag {
+  font-size: 13px;
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-weight: 600;
+}
+
+.my-page__tag--red {
+  background: #ffe0e0;
+  color: var(--accent);
+}
+
+.my-page__tag--teal {
+  background: #eef7f5;
+  color: var(--teal);
+}
+
+.my-page__sub-list {
+  margin: 0;
+  padding: 0 0 0 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.my-page__sub-item {
+  font-size: 14px;
+  color: var(--text-h);
+  line-height: 1.5;
+}
+
+.my-page__fcm-note {
+  font-size: 14px;
+  color: var(--teal);
+  background: #eef7f5;
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.my-page__edit-btn {
+  width: 100%;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.my-page__nfc-card {
+  background: #f8f9ff;
+  border: 1.5px solid #c8d0e8;
+  border-radius: 12px;
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.my-page__nfc-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: #4a5580;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.my-page__nfc-url {
+  font-size: 13px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #dde;
+  border-radius: 8px;
+  padding: 8px 10px;
+  word-break: break-all;
+  margin: 0;
+  font-family: monospace;
+  line-height: 1.5;
+}
+
+.my-page__nfc-copy {
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border: 1.5px solid #4a5580;
+  border-radius: 8px;
+  background: #fff;
+  color: #4a5580;
+  cursor: pointer;
+  align-self: flex-start;
+  touch-action: manipulation;
+}
+
+.my-page__nfc-copy:active {
+  background: #eef0f8;
+}
+
+.my-page__nfc-hint {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.my-page__divider {
+  height: 1px;
+  background: var(--border);
+  margin: 4px 0;
+}
+
+.my-page__also-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 0;
+  text-align: center;
+}
+
+.my-page__nfc-key {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  color: var(--text);
+}
+
+.my-page__license {
+  margin: 24px 20px 16px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.my-page__license a {
+  color: var(--muted);
+  text-decoration: underline;
+}
+
+.my-page__recovery-code {
+  margin: 8px 0;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+  word-break: break-all;
+  color: var(--text);
+}
+
+.my-page__recovery-code--hidden {
+  color: var(--muted);
+}
+
+.my-page__recover-link {
+  display: block;
+  margin: 4px auto 0;
+  padding: 12px;
+  border: none;
+  background: none;
+  font: inherit;
+  font-size: 15px;
+  color: var(--muted);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.my-page__recover {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.my-page__recover-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.my-page__recover-input {
+  font: inherit;
+  font-size: 16px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+  color: var(--text);
+  letter-spacing: 0.05em;
+}

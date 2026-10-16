@@ -1,0 +1,5 @@
+# ローカル開発用（wrangler dev）。コピーして server/.dev.vars を作成する。
+# STORE=memory にすると Firestore の代わりにメモリへ保存し、本番データに触れずに動かせる。
+STORE=memory
+APP_ORIGIN=http://localhost:5173
+ALLOWED_ORIGINS=http://localhost:5173

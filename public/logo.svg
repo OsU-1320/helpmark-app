@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+
+  <!-- NFC アンテナコイル -->
+  <circle cx="100" cy="95" r="92" fill="none" stroke="#E5001A" stroke-width="1.5" opacity="0.17"/>
+  <circle cx="100" cy="95" r="78" fill="none" stroke="#E5001A" stroke-width="1.5" opacity="0.28"/>
+  <circle cx="100" cy="95" r="64" fill="none" stroke="#E5001A" stroke-width="1.5" opacity="0.44"/>
+
+  <!-- ふっくらした赤いハート -->
+  <path
+    d="M100,64 C112,46 145,55 145,78 C145,104 100,138 100,138 C100,138 55,104 55,78 C55,55 88,46 100,64 Z"
+    fill="#E5001A"
+  />
+
+  <!-- 白い十字（前版より20%大・やや上） -->
+  <rect x="93.5" y="72" width="13" height="44" fill="white" rx="3"/>
+  <rect x="72"   y="90" width="56" height="13" fill="white" rx="3"/>
+
+</svg>
